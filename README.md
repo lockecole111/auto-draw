@@ -1,7 +1,7 @@
 # auto-draw
- an auto "你画我猜" game tool.
+自动 "你画我猜" 游戏辅助工具。
  
-Thanks to the following open source projects:
+Thanks to the following projects:
 
 
  **[linedraw](https://github.com/LingDong-/linedraw)**
