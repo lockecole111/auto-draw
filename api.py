@@ -1,5 +1,5 @@
 # coding=utf-8
-
+import urllib
 import draw
 import pynput
 import urllib2
@@ -17,22 +17,21 @@ def getImg(url):
     return filename
 
 def drawKey(key):
-
+    #key = str(key)
     api = 'http://image.so.com/j?q=%s&src=srp&correct=&sn=1&pn='%key
-    
-    try:
-        req = urllib2.urlopen(api)
-        res = req.read()
-        res = json.loads(res)
-        res = res['list'][0]['thumb']
-    except:
-        return False
+    print api
+    req = urllib2.urlopen(api)
+    print req
+    res = req.read()
+    print res
+    res = json.loads(res)
+    res = res['list'][0]['thumb']
     filename = getImg(res)
 #    time.sleep(3)
     if filename:
-        i = draw.ImageDrawer(420,280)
+        i = draw.ImageDrawer(480,280)
         i.drawImage(filename)
 
     
 if __name__ == '__main__':
-    drawKey('企鹅')
+    drawKey('蒙娜丽莎')

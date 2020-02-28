@@ -14,7 +14,7 @@ export_path = "output/out.svg"
 draw_contours = True
 draw_hatch = False
 show_bitmap = False
-resolution = 320
+resolution = 390
 hatch_size = 16
 contour_simplify = 1
 no_cv = True
@@ -24,7 +24,7 @@ def find_edges(IM):
     if no_cv:
         #appmask(IM,[F_Blur])
         appmask(IM,[F_SobelX,F_SobelY])
-    return IM.point(lambda p: p > 150 and 255)  
+    return IM.point(lambda p: p > 128 and 255)  
 
 
 def getdots(IM):
