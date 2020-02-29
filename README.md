@@ -1,5 +1,8 @@
 # auto-draw
 自动 "你画我猜" 游戏辅助工具。
+
+## Screenshots
+
 ![](https://github.com/lockecole111/auto-draw/blob/master/images/demo.png)
 
 ## Useage
